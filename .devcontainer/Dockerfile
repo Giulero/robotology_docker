@@ -60,7 +60,6 @@ RUN mkdir -p ${Robotology_DIR} &&\
 
 ARG USERNAME
 ARG USEREMAIL
-
 RUN git config --global user.name USERNAME
 RUN git config --global user.email USEREMAIL
 

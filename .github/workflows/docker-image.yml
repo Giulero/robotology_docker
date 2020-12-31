@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build --build-arg USERNAME="giulero" --build-arg USEREMAIL="giuseppe.lerario@gmail.com" --tag robotology_docker:$(date +%s) .devcontainer/
+      run: docker build --build-arg USERNAME="GitHub Actions" --build-arg USEREMAIL="actions@users.noreply.github.com" --tag robotology_docker:$(date +%s) .devcontainer/
