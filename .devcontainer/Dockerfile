@@ -72,8 +72,8 @@ RUN cd ${Robotology_DIR}/robotology-superbuild &&\
           -DROBOTOLOGY_USES_OCTAVE:BOOL=OFF \
           -DROBOTOLOGY_USES_PYTHON:BOOL=ON \
           -DROBOTOLOGY_USES_MATLAB:BOOL=OFF \
-          .. && make &&\
-    echo "source ${Robotology_DIR}/robotology-superbuild/build/install/share/robotology-superbuild/setup.sh" >> /etc/bash.bashrc
+          .. && make
 
+RUN echo "source ${Robotology_DIR}/robotology-superbuild/build/install/share/robotology-superbuild/setup.sh" >> /etc/bash.bashrc
 
 CMD ["bash"]
