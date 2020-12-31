@@ -5,7 +5,9 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Ubuntu version: focal, bionic
-		"args": { "VARIANT": "focal" }
+		"args": { "VARIANT": "focal" ,
+				  "USERNAME": "giulero",
+				  "USEREMAIL": "giuseppe.lerario@gmail.com"}
 	},
 
 	// Set *default* container specific settings.json values on container create.

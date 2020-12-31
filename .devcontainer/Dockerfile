@@ -58,8 +58,11 @@ RUN mkdir -p ${Robotology_DIR} &&\
     cd ${Robotology_DIR} &&\
     git clone https://github.com/robotology/robotology-superbuild.git
 
-RUN git config --global user.name giulero
-RUN git config --global user.email giuseppe.lerario@gmail.com
+ARG USERNAME
+ARG USEREMAIL
+
+RUN git config --global user.name USERNAME
+RUN git config --global user.email USEREMAIL
 
 RUN cd ${Robotology_DIR}/robotology-superbuild &&\
     mkdir -p build && cd build &&\
@@ -72,3 +75,6 @@ RUN cd ${Robotology_DIR}/robotology-superbuild &&\
           -DROBOTOLOGY_USES_MATLAB:BOOL=OFF \
           .. && make &&\
     echo "source ${Robotology_DIR}/robotology-superbuild/build/install/share/robotology-superbuild/setup.sh" >> /etc/bash.bashrc
+
+
+CMD ["bash"]
