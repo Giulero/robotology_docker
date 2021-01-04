@@ -72,7 +72,7 @@ RUN cd ${Robotology_DIR}/robotology-superbuild &&\
           -DROBOTOLOGY_USES_OCTAVE:BOOL=OFF \
           -DROBOTOLOGY_USES_PYTHON:BOOL=ON \
           -DROBOTOLOGY_USES_MATLAB:BOOL=OFF \
-          -DROBOTOLOGY_ENABLE_FULL_DEPS:BOOL=ON \
+          -DROBOTOLOGY_ENABLE_DYNAMICS_FULL_DEPS:BOOL=ON \
           .. && make
 
 # copy to "system wide" bashrc
