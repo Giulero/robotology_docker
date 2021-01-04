@@ -72,8 +72,11 @@ RUN cd ${Robotology_DIR}/robotology-superbuild &&\
           -DROBOTOLOGY_USES_OCTAVE:BOOL=OFF \
           -DROBOTOLOGY_USES_PYTHON:BOOL=ON \
           -DROBOTOLOGY_USES_MATLAB:BOOL=OFF \
+          -DROBOTOLOGY_ENABLE_DYNAMICS_FULL_DEPS:BOOL=ON \
           .. && make
 
+# copy to "system wide" bashrc
+# RUN echo "export PYTHONPATH=${Robotology_DIR}/robotology-superbuild/build/install/lib/python3/site-packages" >> ${Robotology_DIR}/robotology-superbuild/build/install/share/robotology-superbuild/setup.sh
 RUN echo "source ${Robotology_DIR}/robotology-superbuild/build/install/share/robotology-superbuild/setup.sh" >> /etc/bash.bashrc
 
 CMD ["bash"]
