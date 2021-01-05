@@ -17,5 +17,12 @@ run in the terminal
 docker build --build-arg USERNAME="your git user name" --build-arg USEREMAIL="your git email" --tag robotology_docker:$(date +%s) .devcontainer/
 ```
 
-In the [Dockerfile](https://github.com/Giulero/robotology_docker/blob/main/.devcontainer/Dockerfile) some compilation flags are handled (for now no Matlab).
+**or**
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Giulero/robotology_docker)
+
+
+
+---
+
+In the [Dockerfile](https://github.com/Giulero/robotology_docker/blob/main/.devcontainer/Dockerfile) some compilation flags are handled (for now no Matlab).
